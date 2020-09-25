@@ -15,6 +15,17 @@ To authenticate and manage user in application
 * Create users and user role mapping
 
 ### Keycloak configuration in Spring  
-![Keycloak configuration](resources/static/images/keycloak_configuration.png)
-![Alt text](/home/tungdaigia/Desktop/sda2/grad-keycloak/src/main/resources/static/images/keycloak_configuration.png)
+<div align="center">
+    <img src="src/main/resources/static/images/keycloak_configuration.png" width="500" >
+</div>
+
+### Authenticate Request (is OAuth2 Authoz request, Authoz code grant flow)
+Client (spring-boot-app) make redirect response:
+<div align="center">
+    <img src="src/main/resources/static/images/redirect_location.png">
+</div>
+Which trigger Browser make authen request to Authoz endpoint:
+<div align="center">
+    <img src="src/main/resources/static/images/request_param.png">
+</div>
 
