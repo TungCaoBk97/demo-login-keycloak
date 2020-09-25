@@ -1,5 +1,6 @@
 # Spring Boot application using Keycloak 
-To authenticate and manage user in application
+Manage user in simple library with Keycloak. Has 2 roles: Member and Librarian. \
+3 endpoint with different in accessible, `/index` for free accessible, `books` for Member accessible, `manager` for Librarian accessible
 
 ### Reference Documentation
 * [Spring Security and Keycloak to Secure a Spring Boot Application - A First Look](https://www.thomasvitale.com/spring-security-keycloak/)
