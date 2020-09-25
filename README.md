@@ -19,17 +19,28 @@ To authenticate and manage user in application
     <img src="src/main/resources/static/images/keycloak_configuration.png" width="500" >
 </div>
 
-### Authenticate Request (is OAuth2 Authoz request, Authoz code grant flow)
-Client (spring-boot-app) make redirect response:
+### Step to perform authoz code flow
+###### 1. Client (spring-boot-app) make redirect response:
 <div align="center">
     <img src="src/main/resources/static/images/redirect_location.png">
 </div>
-Which trigger Browser make authen request to Authoz endpoint:
+
+###### 2. Which trigger Browser make authen request to Authoz endpoint:
 <div align="center">
-    <img src="src/main/resources/static/images/request_param.png">
+    <img src="src/main/resources/static/images/authen_request.png">
 </div>
-OP redirects Browser back to client (spring-boot-app) using redirectURI. 
-URI includes authoz code and any local state provided by client
+
+###### 3. OP authen end-user
+###### 4. If authen successfully, OP redirects Browser back to client (spring-boot-app) using redirectURI. URI includes authoz code and any local state provided by client
 <div align="center">
-    <img src="src/main/resources/static/images/authoz_code.png">
+    <img src="src/main/resources/static/images/authen_response.png">
 </div>
+
+###### 5. Client request to Token Endpont using Authoz code reveived
+###### 6. Client receive response contain: ID token and Access token
+
+_Step 5 and 6 only perform from postman, because server-side application is confidential 
+client --> cannot see access token from browser. (Cannot complete 2 steps)_
+
+
+
