@@ -28,4 +28,8 @@ Which trigger Browser make authen request to Authoz endpoint:
 <div align="center">
     <img src="src/main/resources/static/images/request_param.png">
 </div>
-
+OP redirects Browser back to client (spring-boot-app) using redirectURI. 
+URI includes authoz code and any local state provided by client
+<div align="center">
+    <img src="src/main/resources/static/images/authoz_code.png">
+</div>
